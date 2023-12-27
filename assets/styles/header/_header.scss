@@ -1,12 +1,12 @@
 .header {
    border-bottom: 1px solid #F2F2F7;
-   background-color: black;
+   background-color: var(--primary_color_dark);
 
    &-block {
       &__main {
          &--logo {
-            width: 140px;
-            height: 33px;
+            width: 60px;
+            height: 40px;
          }
 
          &--menu {
@@ -16,7 +16,7 @@
                position: relative;
 
                &+& {
-                  margin-left: 44px;
+                  margin-left: 20px;
                }
 
                &:hover &__dropdown {
@@ -42,13 +42,13 @@
                      left: 50%;
                      width: 0;
                      height: 3px;
-                     background-color: var(--primary_color_dark);
+                     background-color: var(--neutral_color_white);
                      transition: var(--transition-global);
                      z-index: 9999;
                   }
 
                   &.active {
-                     color: var(--primary_color_dark);
+                     color: var(--neutral_color_white);
 
                      &::before {
                         width: 100%;
@@ -68,7 +68,7 @@
                   position: absolute;
                   top: 100%;
                   left: 0;
-                  background: var(--neutral_color_white);
+                  background: var(--primary_color_dark);
                   box-shadow: 0px 4px 32px rgba(138, 138, 138, 0.1);
                   border-radius: 0px 0px 8px 8px;
                   z-index: 999;
@@ -83,11 +83,11 @@
                      &-link {
                         width: 100%;
                         font: rem(15px) $Regular;
-                        color: var(--default_dark);
+                        color: var(--default_light);
                         transition: var(--transition-global);
 
                         &:hover {
-                           color: var(--primary_color_dark);
+                           color: var(--neutral_color_white);
                         }
                      }
                   }
@@ -134,4 +134,42 @@
 
    }
 
+}
+
+.user-dropdown {
+   width: 235px;
+   padding: 20px 14px 20px 20px;
+   position: absolute;
+   top: 100%;
+   right: 0;
+   background: var(--primary_color_dark);
+   box-shadow: 0px 4px 32px rgba(138, 138, 138, 0.1);
+   border-radius: 0px 0px 8px 8px;
+   z-index: 999;
+   display: none;
+
+   &__list {
+      &--item {
+         &-main {
+            color: var(--default_light);
+            font: rem(16px) $Medium;
+            margin-top: 5px;
+            transition: var(--transition-global);
+
+            &:hover {
+               color: var(--neutral_color_white);
+
+            }
+         }
+      }
+   }
+
+   &__name {
+      &--details {
+         color: var(--default_light);
+         font: rem(18px) $Medium;
+         margin-bottom: 5px;
+      }
+
+   }
 }

@@ -5,13 +5,14 @@
     padding: 10px 25px;
     text-align: center;
     white-space: nowrap;
+    transition: .3s;
 
     &-background {
-        background-color: var(--primary_color_dark);
+        background-color: var(--primary_color_light);
         color: var(--neutral_color_white);
 
         &:hover {
-            background-color: #6cce98;
+            background-color: var(--primary_color_dark);
         }
     }
 
